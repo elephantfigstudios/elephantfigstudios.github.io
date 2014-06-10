@@ -1,0 +1,97 @@
+<html>
+
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+
+<style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  position: absolute;
+  display: block;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 100px;
+  height: 150px;
+  margin-top: -75px;
+  color:white;
+  text-wrap: nowrap;
+  font-weight: lighter;
+}
+h2 {
+  color: white;
+  position: absolute;
+  display: block;
+  top: 50%;
+  width: 100%;
+  margin-top: 75px;
+  text-align: center;
+  -webkit-animation: fadein 5s;
+  font-weight: lighter;
+}
+
+a {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  -webkit-animation: fadein 10s;
+}
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+img {
+  display: block;
+  width: 110px;
+  height: 100px;
+
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  -webkit-animation: fadein 10s;
+}
+
+section {
+  position: relative;
+  z-index: 0;
+  background: linear-gradient(to bottom, blue, red);
+  width: 100%;
+  height: 100%;
+}
+section:after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, green, aqua);
+    -webkit-mask-image: linear-gradient(to right, #000, transparent);
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='0'><mask id='alpha_mask' maskUnits='objectBoundingBox' maskContentUnits='objectBoundingBox'><linearGradient id='fade_right_gradient' gradientUnits='objectBoundingBox' x2='1' y2='0'><stop stop-color='white' stop-opacity='1' offset='0'><\/stop><stop stop-color='white' stop-opacity='0' offset='1'><\/stop><\/linearGradient><rect x='0' y='0' width='1' height='1' fill='url(%23fade_right_gradient)'><\/rect><\/mask><\/svg>#alpha_mask");
+  }
+}
+
+</style>
+
+<body>
+
+<section>
+  <h1>Coming soon...</h1>
+  <h2>A universal music standard.</h1>
+  <a href="mailto:info@elephantfigstudios.com">Contact</a>
+  <img src="elephant_lines.svg" alt="logo"/>
+</section>
+
+</body>
